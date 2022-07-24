@@ -31,6 +31,7 @@ function Login() {
                 sessionStorage.setItem("Agent_Email", response.data['email']);
                 sessionStorage.setItem("Agent_Name", response.data['name']);
                 sessionStorage.setItem("isLoggedIn", true);
+                localStorage.setItem("Agent", response.data);
                 redir("/dashboard");
             })
             .catch((error) => {

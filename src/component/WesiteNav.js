@@ -25,6 +25,9 @@ function WebsiteNav() {
                                 <li className="nav-item" id="com_link">
                                     <b><Link className="nav-link" to="/profile">Profile</Link></b>
                                 </li>
+                                <li className="nav-item" id="com_link">
+                                    <b><Link className="nav-link" to="/certificate">Certificate</Link></b>
+                                </li>
                             </ul>
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item" id="com_link">

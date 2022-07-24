@@ -1,8 +1,8 @@
 import { Navigate } from 'react-router-dom';
 import { Component } from "react";
 import WebsiteNav from "../WesiteNav";
-import Policy from "./Policy";
 import Score from "./Score";
+import Policy from '../policies/Policy';
 
 class Dashboard extends Component {
     render() {
