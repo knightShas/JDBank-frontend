@@ -31,7 +31,12 @@ function Login() {
                 sessionStorage.setItem("Agent_Email", response.data['email']);
                 sessionStorage.setItem("Agent_Name", response.data['name']);
                 sessionStorage.setItem("isLoggedIn", true);
-                localStorage.setItem("Agent", response.data);
+                localStorage.setItem("AgentAadharNo", response.data["aadharNo"]);
+                localStorage.setItem("AgentPanNo", response.data["panNo"]);
+                localStorage.setItem("AgentPhoneNo", response.data["phoneNo"]);
+                localStorage.setItem("AgentOccation", response.data["occation"]);
+                localStorage.setItem("AgentStatus", response.data["status"]);
+                localStorage.setItem("AgentGender", response.data["gender"]);
                 redir("/dashboard");
             })
             .catch((error) => {

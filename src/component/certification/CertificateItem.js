@@ -1,10 +1,11 @@
-import verified from '../../verified.png';
+import verifiedIcon from '../../verified.png';
+import unapproved from '../../noapproved.png';
 
 export default function CertificateItem(props) {
     return (
         <>
             <li>
-                <div className="container border border-3 rounded-1">
+                <div className="container border border-3 rounded-1 bg-light">
                     <div className="row">
                         <div className="col-9">
                             <div className="container">
@@ -19,9 +20,17 @@ export default function CertificateItem(props) {
                                 </div>
                             </div>
                         </div>
+                        {props.verified ? <>
                         <div className="col-3 my-auto">
-                            <img className="img-fluid" src={verified} alt="verified" />
+                            <img className="img-fluid" src={verifiedIcon} alt="verified" />
                         </div>
+                        </>:<>
+                        <div className="col-3 my-auto">
+                            <img className="img-fluid" src={unapproved} alt="not-verified" />
+                        </div>
+                        </>
+                        }
+                        
                     </div>
                 </div>
             </li>

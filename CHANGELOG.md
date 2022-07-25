@@ -13,3 +13,12 @@
         - Role based navigation and dashboard
         - Policy list and policy detail page is working.
         - Certifate List is Added and redirection is done.
+
+## Date: 25 July 2022 
+## @knightShas
+    -feat: Finished Agent Dashboard
+        - Profile page is working.
+        - Add new Certificate from agent working with verified and not approved image.
+    -feat: Admin Dashboard is in progress
+        - Certificate is appearing for verification.
+        - Verification action is workin.

@@ -1,3 +1,23 @@
 .certificate-ul{
     list-style-type: none;
 }
+
+.certificate-new{
+    border-radius: 80px;
+    height: 150px;
+    width: 150px;
+}
+
+.certificate-link{
+    text-decoration: none;
+}
+
+.certificate-link:hover{
+    text-decoration: none;
+}
+
+.image{
+    height: auto;
+    width: 35vw;
+}
+

@@ -3,6 +3,8 @@ import { Component } from "react";
 import WebsiteNav from "../WesiteNav";
 import Score from "./Score";
 import Policy from '../policies/Policy';
+import CertificateResponse from '../admin/Certificate/CertificateResponse';
+import Agent from '../admin/Agent/Agent';
 
 class Dashboard extends Component {
     render() {
@@ -31,7 +33,15 @@ class Dashboard extends Component {
                 <>
                     <WebsiteNav />
                     <div className='container my-2'>
-                        <h1>Admin User</h1>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <CertificateResponse />
+                            </div>
+                            <div className="col-sm-6">
+                                <Agent />
+                            </div>
+                        </div>
+                        
                     </div>
                 </>
             )

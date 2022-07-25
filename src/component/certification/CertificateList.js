@@ -14,6 +14,7 @@ export default function CertificateList(props){
                     agentName = {item.agentName}
                     issueDate = {item.issueDate}
                     validTillYear = {item.validTillYear}
+                    verified = {item.verified}
                 />
                 ))}
             </ul>

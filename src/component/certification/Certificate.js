@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import WebsiteNav from "../WesiteNav";
 import CertificateList from "./CertificateList";
+import './Certificate.css';
 
 export default function Certificate() {
     const [certificates, setCerticates] = useState([]);
@@ -29,7 +31,16 @@ export default function Certificate() {
         <>
             <WebsiteNav />
             <div className="container mt-4">
-                <CertificateList data = {certificates}/>
+                <div className="row">
+                    <div className="col-lg-9">
+                        <CertificateList data = {certificates}/>
+                    </div>
+                    <div className="col-lg-3 px-5">
+                        <div className="container m-2 p-4 py-5 btn btn-warning certificate-new">
+                            <Link className="certificate-link fw-bold" to="/new" style={{color:"black"}}>Add Certificate</Link>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )
