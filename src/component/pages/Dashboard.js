@@ -34,10 +34,10 @@ class Dashboard extends Component {
                     <WebsiteNav />
                     <div className='container my-2'>
                         <div className="row">
-                            <div className="col-sm-6">
+                            <div className="col-sm-5">
                                 <CertificateResponse />
                             </div>
-                            <div className="col-sm-6">
+                            <div className="col-sm-7">
                                 <Agent />
                             </div>
                         </div>
