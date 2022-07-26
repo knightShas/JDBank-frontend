@@ -26,8 +26,9 @@
 
 ## Date: 26 July 2022 
 ## @knightShas
-    -feat: Mostly Finished Admin Dashboard only delete part is pending
+    -feat: Finished with Admin Dashboard.
         - Agent List is displayed with approval button.
         - Agent List is working
         - Agent Detail is working.
         - Top Agent with reward point is displayed on dashboard.
+        - All Certificate display with all functionality working.

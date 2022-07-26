@@ -4,15 +4,21 @@ import CertificateResponseList from "./CertificateResponseList";
 export default function CerrtificateResponse() {
     const [certificate, setCertificate] = useState([]);
     const [fetchError, setFetchError] = useState(false);
+    const page = window.location.pathname;
+    var url = "";
+    if (page === "/dashboard") {
+        url = "http://localhost:8081/admin/certificate/no_verify";
+    }
+    if (page === "/allcertificate") {
+        url = "http://localhost:8081/admin/certificate/all";
+    }
 
     useEffect(() => {
-        const url = "http://localhost:8081/admin/certificate/no_verify";
-
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
                 const json = await response.json();
-                // console.log(json.length);
+                console.log(json);
                 if (json.length === 0) {
                     setFetchError(true);
                 }

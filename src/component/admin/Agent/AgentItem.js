@@ -25,7 +25,26 @@ export default function AgentItem(props) {
                 alert("Error");
             });
     }
-    if(page === "/dashboard"){
+
+    function handleDeleteClick() {
+        const agentEmail = agentEmailRef.current.value;
+        const url = "http://localhost:8081/admin/agent/delete/" + agentEmail;
+        axios({
+            url: url,
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => {
+                // console.log(response.data);
+                window.location.reload();
+            })
+            .catch((error) => {
+                alert("Error");
+            });
+    }
+    if (page === "/dashboard") {
         return (
             <>
                 <tr>
@@ -35,14 +54,14 @@ export default function AgentItem(props) {
                     <td>{props.email}</td>
                     <td>
                         <input type="hidden" value={props.email} ref={agentEmailRef} />
-                        <Link className="agent-link fw-bold mx-2" to="/agent/detail" state={{agentEmail: props.email}}>View</Link>
-                        <button className="btn btn-primary btn-sm mx-2" onClick={handleClick}>Approve</button>
+                        <Link className="agent-link fw-bold mx-2" to="/agent/detail" state={{ agentEmail: props.email }}>View</Link>
+                        <button className="btn btn-success btn-sm mx-2" onClick={handleClick}>Authorize</button>
                     </td>
                 </tr>
             </>
         )
     }
-    if(page === "/agent"){
+    if (page === "/agent") {
         return (
             <>
                 <tr>
@@ -52,7 +71,12 @@ export default function AgentItem(props) {
                     <td>{props.email}</td>
                     <td>
                         <input type="hidden" value={props.email} ref={agentEmailRef} />
-                        <Link className="agent-link fw-bold mx-2" to="/agent/detail" state={{agentEmail: props.email}}>View</Link>
+                        <Link className="agent-link fw-bold mx-2" to="/agent/detail" state={{ agentEmail: props.email }}>View</Link>
+                        {props.authorize === false ? <>
+                            <button className="btn btn-success btn-sm mx-2" onClick={handleClick}>Authorize</button>
+                        </> : <>
+                            <button className="btn btn-danger btn-sm mx-2" onClick={handleDeleteClick}>Delete</button>
+                        </>}
                     </td>
                 </tr>
             </>
