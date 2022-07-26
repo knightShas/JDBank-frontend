@@ -5,6 +5,7 @@ import Score from "./Score";
 import Policy from '../policies/Policy';
 import CertificateResponse from '../admin/Certificate/CertificateResponse';
 import Agent from '../admin/Agent/Agent';
+import TopPerformer from '../admin/TopPerformer';
 
 class Dashboard extends Component {
     render() {
@@ -41,7 +42,9 @@ class Dashboard extends Component {
                                 <Agent />
                             </div>
                         </div>
-                        
+                    </div>
+                    <div className='container my-3'>
+                        <TopPerformer />
                     </div>
                 </>
             )

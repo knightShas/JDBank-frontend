@@ -5,7 +5,7 @@ import './WebsiteNav.css';
 function WebsiteNav() {
     const agent_name = sessionStorage.getItem("Agent_Name");
     const role = sessionStorage.getItem("ROLE");
-    if(role === "agent"){
+    if (role === "agent") {
         return (
             <>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light py-3">
@@ -43,7 +43,7 @@ function WebsiteNav() {
             </>
         )
     }
-    else if(role === "admin"){
+    else if (role === "admin") {
         return (
             <>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light py-3">
@@ -61,7 +61,7 @@ function WebsiteNav() {
                                     <b><Link className="nav-link" to="/dashboard">Home</Link></b>
                                 </li>
                                 <li className="nav-item" id="com_link">
-                                    <b><Link className="nav-link" to="#">Agents</Link></b>
+                                    <b><Link className="nav-link" to="/agent">Agents</Link></b>
                                 </li>
                             </ul>
                             <ul className="navbar-nav ms-auto">
@@ -78,8 +78,29 @@ function WebsiteNav() {
             </>
         )
     }
-    else{
-        <Navigate to="/logout" />
+    else {
+        return (
+            <>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light py-3">
+                    <div className="container">
+                        <Link className="navbar-brand" to="/">
+                            <img src={logo} className="logo-img" alt="logo" />
+                        </Link>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav ms-auto">
+                                <li className="nav-item">
+                                    <b><Link className="nav-link" style={{ color: "red" }} to="/logout">Logout</Link></b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </>
+        )
     }
 }
 export default WebsiteNav;

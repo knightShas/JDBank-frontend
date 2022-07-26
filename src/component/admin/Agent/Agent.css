@@ -1,0 +1,11 @@
+.agent-link{
+    text-decoration: none;
+}
+.agent-link:hover{
+    text-decoration: none;
+}
+
+.agent-det-approv{
+    display: flex;
+    justify-content: center;
+}
