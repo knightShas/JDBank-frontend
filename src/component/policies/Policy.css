@@ -1,3 +1,6 @@
 .policy-link{
     text-decoration: none;
 }
+.policy-link:hover{
+    text-decoration: none;
+}

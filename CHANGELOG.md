@@ -23,3 +23,11 @@
         - Certificate is appearing for verification.
         - Verification action is workin.
         - Agent List is working in admin dashboard.
+
+## Date: 26 July 2022 
+## @knightShas
+    -feat: Mostly Finished Admin Dashboard only delete part is pending
+        - Agent List is displayed with approval button.
+        - Agent List is working
+        - Agent Detail is working.
+        - Top Agent with reward point is displayed on dashboard.

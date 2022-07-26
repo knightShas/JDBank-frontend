@@ -1,7 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import AgentDetail from './component/admin/Agent/AgentDetail';
+import AgentPage from './component/admin/AgentPage';
 import Certificate from './component/certification/Certificate';
 import NewCertificate from './component/certification/NewCertificate';
+import NotAllowed from './component/NotAllowed';
 import Dashboard from './component/pages/Dashboard';
 import Login from './component/pages/Login';
 import Profile from './component/pages/Profile';
@@ -17,7 +20,12 @@ function App() {
         <Route path="/detail" element={<PolicyDetail />} />
         <Route path="/new" element={<NewCertificate />} />
         <Route path="/certificate" element={<Certificate />} />
+
+        <Route path="/agent" element={<AgentPage />} />
+        <Route path="/agent/detail" element={<AgentDetail />} />
         <Route path="/logout" element={<Signout />} />
+
+        <Route path="/notallowed" element={<NotAllowed />} />
       </Routes>
   );
 }

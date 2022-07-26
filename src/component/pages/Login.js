@@ -25,7 +25,7 @@ function Login() {
             data: data,
         })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 alert("Login Success");
                 sessionStorage.setItem("ROLE",response.data['role']);
                 sessionStorage.setItem("Agent_Email", response.data['email']);
@@ -40,8 +40,13 @@ function Login() {
                 redir("/dashboard");
             })
             .catch((error) => {
-                // console.log();
-                alert(error.response.data);
+                // console.error(error.response.status);
+                if(error.response.status === 403){
+                    redir("/notallowed");
+                }
+                else{
+                    alert(error.response.data);
+                }
             });
 
         emailInputRef.current.value = "";

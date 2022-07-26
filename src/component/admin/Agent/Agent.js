@@ -9,7 +9,7 @@ export default function Agent(){
     useEffect(() => {
         let url = "";
         if(page === "/dashboard"){
-            url = "http://localhost:8081/admin/agent/all";
+            url = "http://localhost:8081/admin/agent/unauthorize";
         }
         if(page === "/agent"){
             url = "http://localhost:8081/admin/agent/all";
@@ -26,10 +26,10 @@ export default function Agent(){
         };
 
         fetchData();
-    }, []);
+    });
     return(
         <>
-            <div className="container py-3">
+            <div className="container py-3 bg-light">
                 <h5 className="py-3 text-center">Agent List</h5>
                 <AgentList data = {agents} />
             </div>
