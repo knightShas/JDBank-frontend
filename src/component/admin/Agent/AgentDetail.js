@@ -97,7 +97,7 @@ export default function AgentDetail() {
                         <>
                             <div className="container agent-det-approv">
                                 <input type="hidden" value={agent.email} ref={agentEmailRef} />
-                                <button className="btn btn-primary btn-lg mx-2" onClick={handleClick}>Approve</button>
+                                <button className="btn btn-success btn-lg mx-2" onClick={handleClick}>Authorize</button>
                             </div>
                         </> : <></>
                     }

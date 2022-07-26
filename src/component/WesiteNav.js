@@ -63,6 +63,9 @@ function WebsiteNav() {
                                 <li className="nav-item" id="com_link">
                                     <b><Link className="nav-link" to="/agent">Agents</Link></b>
                                 </li>
+                                <li className="nav-item" id="com_link">
+                                    <b><Link className="nav-link" to="/allcertificate">Certificates</Link></b>
+                                </li>
                             </ul>
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item" id="com_link">
