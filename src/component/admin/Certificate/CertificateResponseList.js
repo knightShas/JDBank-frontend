@@ -5,7 +5,7 @@ export default function CertificateResponseList(props) {
     const page = window.location.pathname;
 
     function handleClick() {
-        const url = "http://localhost:8081/admin/certificate/verify/bulk";
+        const url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/admin/certificate/verify/bulk";
         axios({
             url: url,
             method: "PUT",

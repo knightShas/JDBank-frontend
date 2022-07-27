@@ -11,7 +11,7 @@ export default function AgentDetail() {
     const agentEmailRef = useRef();
 
     useEffect(() => {
-        const url = "http://localhost:8081/admin/agent/" + agentEmail;
+        const url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/admin/agent/" + agentEmail;
 
         const fetchData = async () => {
             try {
@@ -29,7 +29,7 @@ export default function AgentDetail() {
     function handleClick() {
 
         const agentEmail = agentEmailRef.current.value;
-        const url = "http://localhost:8081/admin/agent/authorize/" + agentEmail;
+        const url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/admin/agent/authorize/" + agentEmail;
         axios({
             url: url,
             method: "PUT",

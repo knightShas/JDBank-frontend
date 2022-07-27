@@ -7,10 +7,10 @@ export default function Agent() {
     const page = window.location.pathname;
     var url = "";
     if (page === "/dashboard") {
-        url = "http://localhost:8081/admin/agent/unauthorize";
+        url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/admin/agent/unauthorize";
     }
     if (page === "/agent") {
-        url = "http://localhost:8081/admin/agent/all";
+        url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/admin/agent/all";
     }
 
     useEffect(() => {
