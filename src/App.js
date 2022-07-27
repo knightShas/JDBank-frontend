@@ -9,6 +9,7 @@ import NotAllowed from './component/NotAllowed';
 import Dashboard from './component/pages/Dashboard';
 import Login from './component/pages/Login';
 import Profile from './component/pages/Profile';
+import Signup from './component/pages/Signup';
 import PolicyDetail from './component/policies/PolicyDetail';
 import Signout from './component/Signout.js';
 
@@ -16,6 +17,8 @@ function App() {
   return (
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/detail" element={<PolicyDetail />} />

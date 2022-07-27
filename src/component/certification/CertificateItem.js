@@ -2,6 +2,8 @@ import verifiedIcon from '../../verified.png';
 import unapproved from '../../noapproved.png';
 
 export default function CertificateItem(props) {
+    const date = new Date(props.validTillYear);
+    const validTillYear = date.toISOString().slice(0, 10);
     return (
         <>
             <li>
@@ -16,7 +18,7 @@ export default function CertificateItem(props) {
                                     <p className="fs-2 fw-bold">{props.licenseNo}</p>
                                 </div>
                                 <div className="col-4">
-                                    <p className="fs-4 fw-light">{props.validTillYear}</p>
+                                    <p className="fs-4 fw-light">{validTillYear}</p>
                                 </div>
                             </div>
                         </div>

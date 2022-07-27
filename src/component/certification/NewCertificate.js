@@ -18,8 +18,8 @@ export default function NewCertificate() {
         const certificateName = certificateNameRef.current.value;
         const licenseNoInput = licenseNoInputRef.current.value;
         const issueDate = issueDateRef.current.value;
-        const date = new Date(validTillRef.current.value);
-        const validtill = date.getFullYear();
+        const validtill = validTillRef.current.value;
+        // const validtill = date.getFullYear();
 
         const data = {
             certificateName: certificateName,
@@ -77,7 +77,7 @@ export default function NewCertificate() {
                                     <input type="date" className="form-control" id="issueDate" ref={issueDateRef} />
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="validtill" className="form-label">Valid Till in Year</label>
+                                    <label htmlFor="validtill" className="form-label">Valid Till</label>
                                     <input type="date" className="form-control" id="validtill" ref={validTillRef} />
                                 </div>
                                 <br />
