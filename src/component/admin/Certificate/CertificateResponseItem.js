@@ -10,7 +10,7 @@ export default function CertificateResponseItem(props) {
 
     function handleClick() {
         const licenseNo = licenseRef.current.value;
-        const url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/admin/certificate/verify/" + licenseNo;
+        const url = "https://ec2-54-191-159-56.us-west-2.compute.amazonaws.com:8081/admin/certificate/verify/" + licenseNo;
         axios({
             url: url,
             method: "PUT",
@@ -29,7 +29,7 @@ export default function CertificateResponseItem(props) {
 
     function handleExpireClick(){
         const licenseNo = licenseRef.current.value;
-        const url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/admin/certificate/expire/" + licenseNo;
+        const url = "https://ec2-54-191-159-56.us-west-2.compute.amazonaws.com:8081/admin/certificate/expire/" + licenseNo;
         axios({
             url: url,
             method: "PUT",
@@ -48,7 +48,7 @@ export default function CertificateResponseItem(props) {
 
     function handleDeleteClick(){
         const licenseNo = licenseRef.current.value;
-        const url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/admin/certificate/delete/" + licenseNo;
+        const url = "https://ec2-54-191-159-56.us-west-2.compute.amazonaws.com:8081/admin/certificate/delete/" + licenseNo;
         axios({
             url: url,
             method: "DELETE",

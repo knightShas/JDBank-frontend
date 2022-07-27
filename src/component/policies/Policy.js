@@ -7,7 +7,7 @@ function Policy() {
 
     useEffect(() => {
         const agent_email = sessionStorage.getItem("Agent_Email");
-        const url = "http://ec2-35-89-199-189.us-west-2.compute.amazonaws.com:8081/policies/"+agent_email;
+        const url = "https://ec2-54-191-159-56.us-west-2.compute.amazonaws.com:8081/policies/"+agent_email;
 
         const fetchData = async () => {
             try {
