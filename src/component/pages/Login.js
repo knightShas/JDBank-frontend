@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { useRef } from 'react';
 import axios from "axios";
 
@@ -72,8 +72,9 @@ function Login() {
                                     <input type="password" className="form-control" id="userPassword" ref={passwordInputRef}/>
                                 </div>
                                 <button className="btn btn-warning">Submit</button>
-
+                                
                             </form>
+                        <div className="mt-4"><small>New Agent, <Link to="/signup">Signup</Link> Please!</small></div>
                         </div>
                     </div>
                     <div className="col-3">

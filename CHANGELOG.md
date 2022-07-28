@@ -32,3 +32,7 @@
         - Agent Detail is working.
         - Top Agent with reward point is displayed on dashboard.
         - All Certificate display with all functionality working.
+
+## Date: 28 July 2022 
+## @knightShas
+    -feat: Added signup page
