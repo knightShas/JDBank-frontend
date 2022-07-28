@@ -10,7 +10,7 @@ export default function Certificate() {
 
     useEffect(() => {
         const agent_email = sessionStorage.getItem("Agent_Email");
-        const url = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/certification/" + agent_email;
+        const url = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/certification/" + agent_email;
 
         const fetchData = async () => {
             try {

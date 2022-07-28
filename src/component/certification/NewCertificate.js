@@ -14,7 +14,7 @@ export default function NewCertificate() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/certification/new";
+        const baseURL = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/certification/new";
         const certificateName = certificateNameRef.current.value;
         const licenseNoInput = licenseNoInputRef.current.value;
         const issueDate = issueDateRef.current.value;
