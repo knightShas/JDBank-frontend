@@ -7,10 +7,10 @@ export default function Agent() {
     const page = window.location.pathname;
     var url = "";
     if (page === "/dashboard") {
-        url = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/admin/agent/unauthorize";
+        url = "https://spring-seller-certification.herokuapp.com/admin/agent/unauthorize";
     }
     if (page === "/agent") {
-        url = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/admin/agent/all";
+        url = "https://spring-seller-certification.herokuapp.com/admin/agent/all";
     }
 
     useEffect(() => {

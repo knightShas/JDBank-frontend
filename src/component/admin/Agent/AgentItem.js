@@ -9,7 +9,7 @@ export default function AgentItem(props) {
 
     function handleClick() {
         const agentEmail = agentEmailRef.current.value;
-        const url = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/admin/agent/authorize/" + agentEmail;
+        const url = "https://spring-seller-certification.herokuapp.com/admin/agent/authorize/" + agentEmail;
         axios({
             url: url,
             method: "PUT",
@@ -28,7 +28,7 @@ export default function AgentItem(props) {
 
     function handleDeleteClick() {
         const agentEmail = agentEmailRef.current.value;
-        const url = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/admin/agent/delete/" + agentEmail;
+        const url = "https://spring-seller-certification.herokuapp.com/admin/agent/delete/" + agentEmail;
         axios({
             url: url,
             method: "DELETE",

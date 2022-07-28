@@ -9,7 +9,7 @@ function Login() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/agent";
+        const baseURL = "https://spring-seller-certification.herokuapp.com/agent";
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;
         const data = {

@@ -8,7 +8,7 @@ export default function PolicyDetail(){
     const [policy, setPolicy] = useState([]);
 
     useEffect(() => {
-        const url = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/detail/"+policyNo;
+        const url = "https://spring-seller-certification.herokuapp.com/detail/"+policyNo;
 
         const fetchData = async () => {
             try {
