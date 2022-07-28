@@ -7,10 +7,10 @@ export default function CerrtificateResponse() {
     const page = window.location.pathname;
     var url = "";
     if (page === "/dashboard") {
-        url = "https://ec2-54-191-159-56.us-west-2.compute.amazonaws.com:8081/admin/certificate/no_verify";
+        url = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/admin/certificate/no_verify";
     }
     if (page === "/allcertificate") {
-        url = "https://ec2-54-191-159-56.us-west-2.compute.amazonaws.com:8081/admin/certificate/all";
+        url = "https://ec2-35-165-164-205.us-west-2.compute.amazonaws.com:8081/admin/certificate/all";
     }
 
     useEffect(() => {
