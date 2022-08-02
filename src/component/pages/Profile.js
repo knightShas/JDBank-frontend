@@ -18,7 +18,7 @@ export default function Profile() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const baseURL = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/agent/edit"
+        const baseURL = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/agent/edit"
         const data={
             name:name,
             email:sessionStorage.getItem("Agent_Email"),
@@ -38,7 +38,8 @@ export default function Profile() {
             data: data,
         })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
+                alert("Success!");
                 sessionStorage.setItem("Agent_Email", response.data['email']);
                 sessionStorage.setItem("Agent_Name", response.data['name']);
                 localStorage.setItem("AgentAadharNo", response.data["aadharNo"]);

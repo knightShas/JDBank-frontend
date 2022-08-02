@@ -7,7 +7,7 @@ export default function AgentList(props){
     }
     const page = window.location.pathname;
     function handleClick() {
-        const url = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/admin/agent/authorize/bulk";
+        const url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/agent/authorize/bulk";
         axios({
             url: url,
             method: "PUT",

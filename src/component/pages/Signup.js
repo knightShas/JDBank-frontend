@@ -17,7 +17,7 @@ export default function Signup() {
 
     async function submitHandler(event){
         event.preventDefault();
-        const baseURL = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/agent/new";
+        const baseURL = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/agent/new";
         const email = emailInputRef.current.value;
         const password = passwordInputRef.current.value;
         const conPassword = confirmPasswordInputRef.current.value;

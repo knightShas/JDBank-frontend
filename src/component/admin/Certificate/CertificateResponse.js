@@ -7,10 +7,10 @@ export default function CerrtificateResponse() {
     const page = window.location.pathname;
     var url = "";
     if (page === "/dashboard") {
-        url = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/admin/certificate/no_verify";
+        url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/certificate/no_verify";
     }
     if (page === "/allcertificate") {
-        url = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/admin/certificate/all";
+        url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/certificate/all";
     }
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export default function CerrtificateResponse() {
             try {
                 const response = await fetch(url);
                 const json = await response.json();
-                console.log(json);
+                // console.log(json);
                 if (json.length === 0) {
                     setFetchError(true);
                 }

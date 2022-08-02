@@ -8,13 +8,13 @@ export default function PolicyDetail(){
     const [policy, setPolicy] = useState([]);
 
     useEffect(() => {
-        const url = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/detail/"+policyNo;
+        const url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/detail/"+policyNo;
 
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
                 const json = await response.json();
-                console.log(json);
+                // console.log(json);
                 setPolicy(json);
             } catch (error) {
                 console.log("error", error);

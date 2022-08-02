@@ -7,10 +7,10 @@ export default function Agent() {
     const page = window.location.pathname;
     var url = "";
     if (page === "/dashboard") {
-        url = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/admin/agent/unauthorize";
+        url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/agent/unauthorize";
     }
     if (page === "/agent") {
-        url = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/admin/agent/all";
+        url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/agent/all";
     }
 
     useEffect(() => {

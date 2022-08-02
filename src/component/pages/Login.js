@@ -9,7 +9,7 @@ function Login() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "https://ec2-34-220-127-234.us-west-2.compute.amazonaws.com:8081/agent";
+        const baseURL = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/agent";
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;
         const data = {
