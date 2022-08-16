@@ -8,7 +8,7 @@ export default function PolicyDetail(){
     const [policy, setPolicy] = useState([]);
 
     useEffect(() => {
-        const url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/detail/"+policyNo;
+        const url = "http://localhost:8081/detail/"+policyNo;
 
         const fetchData = async () => {
             try {

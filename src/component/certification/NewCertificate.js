@@ -11,10 +11,11 @@ export default function NewCertificate() {
     const licenseNoInputRef = useRef();
     const issueDateRef = useRef();
     const validTillRef = useRef();
+    const authorize = sessionStorage.getItem('Authorize');
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/certification/new";
+        const baseURL = "http://localhost:8081/certification/new";
         const certificateName = certificateNameRef.current.value;
         const licenseNoInput = licenseNoInputRef.current.value;
         const issueDate = issueDateRef.current.value;
@@ -37,11 +38,12 @@ export default function NewCertificate() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize
             },
             data: data,
         })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 alert("New Certificate Added");
                 redir("/dashboard");
             })

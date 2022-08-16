@@ -6,16 +6,18 @@ export default function CertificateResponseItem(props) {
     const date = new Date(props.issueDate);
     const issueDate = date.toISOString().slice(0, 10);
     const licenseRef = useRef();
+    const authorize = sessionStorage.getItem('Authorize');
     const page = window.location.pathname;
 
     function handleClick() {
         const licenseNo = licenseRef.current.value;
-        const url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/certificate/verify/" + licenseNo;
+        const url = "http://localhost:8081/admin/certificate/verify/" + licenseNo;
         axios({
             url: url,
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize,
             },
         })
             .then((response) => {
@@ -29,7 +31,7 @@ export default function CertificateResponseItem(props) {
 
     function handleExpireClick(){
         const licenseNo = licenseRef.current.value;
-        const url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/certificate/expire/" + licenseNo;
+        const url = "http://localhost:8081/admin/certificate/expire/" + licenseNo;
         axios({
             url: url,
             method: "PUT",
@@ -48,7 +50,7 @@ export default function CertificateResponseItem(props) {
 
     function handleDeleteClick(){
         const licenseNo = licenseRef.current.value;
-        const url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/certificate/delete/" + licenseNo;
+        const url = "http://localhost:8081/admin/certificate/delete/" + licenseNo;
         axios({
             url: url,
             method: "DELETE",

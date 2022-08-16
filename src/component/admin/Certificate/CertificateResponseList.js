@@ -3,14 +3,16 @@ import axios from "axios";
 
 export default function CertificateResponseList(props) {
     const page = window.location.pathname;
+    const authorize = sessionStorage.getItem('Authorize');
 
     function handleClick() {
-        const url = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/admin/certificate/verify/bulk";
+        const url = "http://localhost:8081/admin/certificate/verify/bulk";
         axios({
             url: url,
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize,
             },
         })
             .then((response) => {

@@ -7,6 +7,7 @@ export default function Profile() {
     const [phone, setPhone] = useState(localStorage.getItem("AgentPhoneNo"));
     const [occupation, setOccupation] = useState(localStorage.getItem("AgentOccation"));
     const [status, setStatus] = useState(localStorage.getItem("AgentStatus"));
+    const authorize = sessionStorage.getItem('Authorize');
     // const nameRef = useRef();
     // const emailRef = useRef();
     // const phoneRef = useRef();
@@ -18,7 +19,7 @@ export default function Profile() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const baseURL = "https://ec2-54-71-85-155.us-west-2.compute.amazonaws.com:8081/agent/edit"
+        const baseURL = "http://localhost:8081/agent/edit"
         const data={
             name:name,
             email:sessionStorage.getItem("Agent_Email"),
@@ -34,6 +35,7 @@ export default function Profile() {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize,
             },
             data: data,
         })
