@@ -5,17 +5,24 @@ import WebsiteNav from '../../WesiteNav';
 import './Agent.css';
 
 export default function AgentDetail() {
+    const authorize = sessionStorage.getItem('Authorize');
     const location = useLocation();
     const { agentEmail } = location.state;
     const [agent, setAgent] = useState([]);
     const agentEmailRef = useRef();
 
     useEffect(() => {
+        var myHeaders = new Headers();
+        myHeaders.append("authorize", authorize);
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+        };
         const url = "http://localhost:8081/admin/agent/" + agentEmail;
 
         const fetchData = async () => {
             try {
-                const response = await fetch(url);
+                const response = await fetch(url, requestOptions);
                 const json = await response.json();
                 setAgent(json);
             } catch (error) {
@@ -35,6 +42,7 @@ export default function AgentDetail() {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                "authorize": authorize,
             },
         })
             .then((response) => {

@@ -3,6 +3,7 @@ import axios from "axios";
 
 export default function CertificateResponseList(props) {
     const page = window.location.pathname;
+    const authorize = sessionStorage.getItem('Authorize');
 
     function handleClick() {
         const url = "http://localhost:8081/admin/certificate/verify/bulk";
@@ -11,6 +12,7 @@ export default function CertificateResponseList(props) {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize,
             },
         })
             .then((response) => {

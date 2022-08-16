@@ -7,6 +7,7 @@ export default function Profile() {
     const [phone, setPhone] = useState(localStorage.getItem("AgentPhoneNo"));
     const [occupation, setOccupation] = useState(localStorage.getItem("AgentOccation"));
     const [status, setStatus] = useState(localStorage.getItem("AgentStatus"));
+    const authorize = sessionStorage.getItem('Authorize');
     // const nameRef = useRef();
     // const emailRef = useRef();
     // const phoneRef = useRef();
@@ -34,11 +35,13 @@ export default function Profile() {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize,
             },
             data: data,
         })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
+                alert("Success!");
                 sessionStorage.setItem("Agent_Email", response.data['email']);
                 sessionStorage.setItem("Agent_Name", response.data['name']);
                 localStorage.setItem("AgentAadharNo", response.data["aadharNo"]);

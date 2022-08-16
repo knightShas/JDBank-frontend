@@ -25,18 +25,20 @@ function Login() {
             data: data,
         })
             .then((response) => {
-                // console.log(response);
+                console.log(response);
                 alert("Login Success");
-                sessionStorage.setItem("ROLE",response.data['role']);
-                sessionStorage.setItem("Agent_Email", response.data['email']);
-                sessionStorage.setItem("Agent_Name", response.data['name']);
+                sessionStorage.setItem("ROLE",response.data.agent['role']);
+                sessionStorage.setItem("Agent_Email", response.data.agent['email']);
+                sessionStorage.setItem("Agent_Name", response.data.agent['name']);
+                sessionStorage.setItem("Authorize",response.data['encodeString']);
                 sessionStorage.setItem("isLoggedIn", true);
-                localStorage.setItem("AgentAadharNo", response.data["aadharNo"]);
-                localStorage.setItem("AgentPanNo", response.data["panNo"]);
-                localStorage.setItem("AgentPhoneNo", response.data["phoneNo"]);
-                localStorage.setItem("AgentOccation", response.data["occation"]);
-                localStorage.setItem("AgentStatus", response.data["status"]);
-                localStorage.setItem("AgentGender", response.data["gender"]);
+                localStorage.setItem("AgentAadharNo", response.data.agent["aadharNo"]);
+                localStorage.setItem("AgentPanNo", response.data.agent["panNo"]);
+                localStorage.setItem("AgentPhoneNo", response.data.agent["phoneNo"]);
+                localStorage.setItem("AgentOccation", response.data.agent["occation"]);
+                localStorage.setItem("AgentStatus", response.data.agent["status"]);
+                localStorage.setItem("AgentGender", response.data.agent["gender"]);
+
                 redir("/dashboard");
             })
             .catch((error) => {

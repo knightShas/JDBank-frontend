@@ -5,6 +5,7 @@ import './Agent.css';
 
 export default function AgentItem(props) {
     const agentEmailRef = useRef();
+    const authorize = sessionStorage.getItem('Authorize');
     const page = window.location.pathname;
 
     function handleClick() {
@@ -15,6 +16,7 @@ export default function AgentItem(props) {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize,
             },
         })
             .then((response) => {
@@ -34,6 +36,7 @@ export default function AgentItem(props) {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize,
             },
         })
             .then((response) => {

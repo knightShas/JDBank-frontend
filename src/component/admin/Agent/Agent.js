@@ -4,6 +4,7 @@ import AgentList from "./AgentList";
 export default function Agent() {
     const [agents, setAgents] = useState([]);
     const [fetchError, setFetchError] = useState(false);
+    const authorize = sessionStorage.getItem('Authorize');
     const page = window.location.pathname;
     var url = "";
     if (page === "/dashboard") {
@@ -14,11 +15,16 @@ export default function Agent() {
     }
 
     useEffect(() => {
-
+        var myHeaders = new Headers();
+        myHeaders.append("authorize", authorize);
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+        };
         const fetchData = async () => {
 
             try {
-                const response = await fetch(url);
+                const response = await fetch(url, requestOptions);
                 const json = await response.json();
                 setAgents(json);
             } catch (error) {

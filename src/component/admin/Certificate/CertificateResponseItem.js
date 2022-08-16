@@ -6,6 +6,7 @@ export default function CertificateResponseItem(props) {
     const date = new Date(props.issueDate);
     const issueDate = date.toISOString().slice(0, 10);
     const licenseRef = useRef();
+    const authorize = sessionStorage.getItem('Authorize');
     const page = window.location.pathname;
 
     function handleClick() {
@@ -16,6 +17,7 @@ export default function CertificateResponseItem(props) {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize,
             },
         })
             .then((response) => {

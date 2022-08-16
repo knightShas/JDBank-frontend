@@ -14,11 +14,18 @@ export default function CerrtificateResponse() {
     }
 
     useEffect(() => {
+        const authorize = sessionStorage.getItem('Authorize');
+        var myHeaders = new Headers();
+        myHeaders.append("authorize", authorize);
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+        };
         const fetchData = async () => {
             try {
-                const response = await fetch(url);
+                const response = await fetch(url, requestOptions);
                 const json = await response.json();
-                console.log(json);
+                // console.log(json);
                 if (json.length === 0) {
                     setFetchError(true);
                 }

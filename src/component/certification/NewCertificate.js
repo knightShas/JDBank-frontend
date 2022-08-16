@@ -11,6 +11,7 @@ export default function NewCertificate() {
     const licenseNoInputRef = useRef();
     const issueDateRef = useRef();
     const validTillRef = useRef();
+    const authorize = sessionStorage.getItem('Authorize');
 
     async function submitHandler(event) {
         event.preventDefault();
@@ -37,11 +38,12 @@ export default function NewCertificate() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "authorize":authorize
             },
             data: data,
         })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 alert("New Certificate Added");
                 redir("/dashboard");
             })
