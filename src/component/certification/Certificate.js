@@ -11,7 +11,7 @@ export default function Certificate() {
     useEffect(() => {
         const agent_email = sessionStorage.getItem("Agent_Email");
         const authorize = sessionStorage.getItem('Authorize');
-        const url = "http://localhost:8081/certification/" + agent_email;
+        const url = "https://ec2-35-89-10-119.us-west-2.compute.amazonaws.com:8081/certification/" + agent_email;
 
         const fetchData = async () => {
             var myHeaders = new Headers();
