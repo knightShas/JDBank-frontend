@@ -5,7 +5,7 @@ export default function TopPerformer() {
     const [point, setPoint] = useState(0);
 
     useEffect(() => {
-        const url = "https://ec2-35-89-10-119.us-west-2.compute.amazonaws.com:8081/admin/agent/top/performer";
+        const url = "https://54.149.229.8:8081/admin/agent/top/performer";
 
         const fetchData = async () => {
             try {
@@ -13,7 +13,7 @@ export default function TopPerformer() {
                 const json = await response.json();
                 // console.log(json.length);
                 setAgent(json);
-                const rewardUrl = "https://ec2-35-89-10-119.us-west-2.compute.amazonaws.com:8081/reward/" + json['email'];
+                const rewardUrl = "https://54.149.229.8:8081/reward/" + json['email'];
                 try {
                     const response = await fetch(rewardUrl);
                     const reward = await response.json();

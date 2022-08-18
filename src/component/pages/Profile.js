@@ -19,7 +19,7 @@ export default function Profile() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const baseURL = "https://ec2-35-89-10-119.us-west-2.compute.amazonaws.com:8081/agent/edit"
+        const baseURL = "https://54.149.229.8:8081/agent/edit"
         const data={
             name:name,
             email:sessionStorage.getItem("Agent_Email"),

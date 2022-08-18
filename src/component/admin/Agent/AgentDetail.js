@@ -18,7 +18,7 @@ export default function AgentDetail() {
             method: 'GET',
             headers: myHeaders,
         };
-        const url = "https://ec2-35-89-10-119.us-west-2.compute.amazonaws.com:8081/admin/agent/" + agentEmail;
+        const url = "https://54.149.229.8:8081/admin/agent/" + agentEmail;
 
         const fetchData = async () => {
             try {
@@ -36,7 +36,7 @@ export default function AgentDetail() {
     function handleClick() {
 
         const agentEmail = agentEmailRef.current.value;
-        const url = "https://ec2-35-89-10-119.us-west-2.compute.amazonaws.com:8081/admin/agent/authorize/" + agentEmail;
+        const url = "https://54.149.229.8:8081/admin/agent/authorize/" + agentEmail;
         axios({
             url: url,
             method: "PUT",
