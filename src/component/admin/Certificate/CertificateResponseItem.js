@@ -11,7 +11,7 @@ export default function CertificateResponseItem(props) {
 
     function handleClick() {
         const licenseNo = licenseRef.current.value;
-        const url = "https://54.149.229.8:8081/admin/certificate/verify/" + licenseNo;
+        const url = "https://34.216.42.79:8081/admin/certificate/verify/" + licenseNo;
         axios({
             url: url,
             method: "PUT",
@@ -31,7 +31,7 @@ export default function CertificateResponseItem(props) {
 
     function handleExpireClick(){
         const licenseNo = licenseRef.current.value;
-        const url = "https://54.149.229.8:8081/admin/certificate/expire/" + licenseNo;
+        const url = "https://34.216.42.79:8081/admin/certificate/expire/" + licenseNo;
         axios({
             url: url,
             method: "PUT",
@@ -50,7 +50,7 @@ export default function CertificateResponseItem(props) {
 
     function handleDeleteClick(){
         const licenseNo = licenseRef.current.value;
-        const url = "https://54.149.229.8:8081/admin/certificate/delete/" + licenseNo;
+        const url = "https://34.216.42.79:8081/admin/certificate/delete/" + licenseNo;
         axios({
             url: url,
             method: "DELETE",

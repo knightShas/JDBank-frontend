@@ -6,7 +6,7 @@ export default function CertificateResponseList(props) {
     const authorize = sessionStorage.getItem('Authorize');
 
     function handleClick() {
-        const url = "https://54.149.229.8:8081/admin/certificate/verify/bulk";
+        const url = "https://34.216.42.79:8081/admin/certificate/verify/bulk";
         axios({
             url: url,
             method: "PUT",

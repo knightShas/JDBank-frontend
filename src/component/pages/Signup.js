@@ -17,7 +17,7 @@ export default function Signup() {
 
     async function submitHandler(event){
         event.preventDefault();
-        const baseURL = "https://54.149.229.8:8081/agent/new";
+        const baseURL = "https://34.216.42.79:8081/agent/new";
         const email = emailInputRef.current.value;
         const password = passwordInputRef.current.value;
         const conPassword = confirmPasswordInputRef.current.value;

@@ -8,7 +8,7 @@ export default function AgentList(props){
     const page = window.location.pathname;
     function handleClick() {
         const authorize = sessionStorage.getItem('Authorize');
-        const url = "https://54.149.229.8:8081/admin/agent/authorize/bulk";
+        const url = "https://34.216.42.79:8081/admin/agent/authorize/bulk";
         axios({
             url: url,
             method: "PUT",

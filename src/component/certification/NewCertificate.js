@@ -15,7 +15,7 @@ export default function NewCertificate() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "https://54.149.229.8:8081/certification/new";
+        const baseURL = "https://34.216.42.79:8081/certification/new";
         const certificateName = certificateNameRef.current.value;
         const licenseNoInput = licenseNoInputRef.current.value;
         const issueDate = issueDateRef.current.value;

@@ -19,7 +19,7 @@ export default function Profile() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const baseURL = "https://54.149.229.8:8081/agent/edit"
+        const baseURL = "https://34.216.42.79:8081/agent/edit"
         const data={
             name:name,
             email:sessionStorage.getItem("Agent_Email"),
