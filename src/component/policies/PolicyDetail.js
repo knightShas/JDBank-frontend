@@ -8,7 +8,7 @@ export default function PolicyDetail(){
     const [policy, setPolicy] = useState([]);
 
     useEffect(() => {
-        const url = "http://localhost:8081/detail/"+policyNo;
+        const url = "https://34.216.42.79:8081/detail/"+policyNo;
 
         const fetchData = async () => {
             try {

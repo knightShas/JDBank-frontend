@@ -4,7 +4,7 @@ function Score() {
     const [point, setPoint] = useState(0);
     useEffect(() => {
         const agent_email = sessionStorage.getItem("Agent_Email");
-        const url = "http://localhost:8081/reward/"+agent_email;
+        const url = "https://34.216.42.79:8081/reward/"+agent_email;
 
         const fetchData = async () => {
             try {
