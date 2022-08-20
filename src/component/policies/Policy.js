@@ -7,7 +7,7 @@ function Policy() {
 
     useEffect(() => {
         const agent_email = sessionStorage.getItem("Agent_Email");
-        const url = "https://34.216.42.79:8081/policies/"+agent_email;
+        const url = "http://localhost:8081/policies/"+agent_email;
 
         const fetchData = async () => {
             try {

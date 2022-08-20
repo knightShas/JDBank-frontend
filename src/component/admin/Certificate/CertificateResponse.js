@@ -7,10 +7,10 @@ export default function CerrtificateResponse() {
     const page = window.location.pathname;
     var url = "";
     if (page === "/dashboard") {
-        url = "https://34.216.42.79:8081/admin/certificate/no_verify";
+        url = "http://localhost:8081/admin/certificate/no_verify";
     }
     if (page === "/allcertificate") {
-        url = "https://34.216.42.79:8081/admin/certificate/all";
+        url = "http://localhost:8081/admin/certificate/all";
     }
 
     useEffect(() => {
